@@ -6,24 +6,42 @@ body {
   background-color: hsl(30, 38%, 92%);
 }
 
-.full-card-container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: 100vh;
+@media (max-width: 4000px) and (min-width: 3500px){
+    body{
+      font-size: 30px;
+  }
 }
 
-.full-card{
+.full-card-container{
   display: flex;
-  margin: 21.9vh 29.2vw;
-  width: 41.7vw;
-  border-radius: 9px;
-  overflow: hidden;
+  justify-content: center;
+}
+
+@media (min-width: 0px) {
+  .full-card{
+    display: flex;
+    margin-top: 21.9vh;
+    width: 41.7vw;
+    border-radius: 9px;
+    overflow: hidden;
+    min-height: 56.25vh;
+  }
+}
+
+@media (max-width: 0px) {
+  .full-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 21.9vh;
+    width: 41.7vw;
+    border-radius: 9px;
+    overflow: hidden;
+    min-height: 56.25vh;
+  }
 }
 
 .image{
-  width: 50%;
+  max-width: 50%;
 }
 
 .card-text-container{
@@ -32,9 +50,7 @@ body {
 }
 
 .card-text{
-  margin-top: 11.7%;
-  margin-left: 10.7%;
-  margin-right: 20%;
+  margin: 10.7%;
 }
 
 .card-text-category-title{
@@ -47,10 +63,9 @@ body {
 }
 
 .card-text-product-title{
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces";
   font-size: 3rem;
-  font-weight: 700;
-  font-optical-sizing: none;
+  font-weight: 800;
   word-spacing: 0.1rem;
   line-height: 1em;
   margin-bottom: 11.7%;
@@ -62,13 +77,17 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5em;
   margin-bottom: 13.3%;
+  width: 87%;
 }
 
 .card-text-product-pricing{
   display: flex;
+  width: fit-content;
   justify-content: center;
   align-items: center;
   margin-bottom: 10.7%;
+  overflow: hidden;
+  gap: 20px;
 }
 
 .discount-pricing{
@@ -76,12 +95,12 @@ body {
   color: hsl(158, 36%, 37%);
   font-size: 2.5rem;
   font-weight: 700;
-  width: 60%;
+  width: 75%;
   letter-spacing: 0.1rem;
 }
 
 .original-pricing{
-  width: 40%;
+  width: 25%;
   color: hsl(228, 12%, 48%);
   font-family:  "Montserrat", sans-serif;
   font-size: 0.875rem;
@@ -91,7 +110,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10.7%;
   width: 100%;
   height: 11%;
   background-color: hsl(158, 36%, 37%);
@@ -114,4 +132,3 @@ body {
   font-family:  "Montserrat", sans-serif;
   font-size: 1rem;
 }
-
